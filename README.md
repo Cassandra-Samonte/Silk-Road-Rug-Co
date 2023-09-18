@@ -1,5 +1,5 @@
 # Express Store
-<p align="center"><img src="repo_banner.png"></p>
+<img src="https://i.imgur.com/C5N7v4y.png" width="100%">
 
 
 ## Introduction
@@ -73,7 +73,7 @@ See some previous student's examples for some inspiration for your store.
 - Create a reusable page that dynamically renders all the information about a product.
 - If a product has a `0` value in the `quantity` field, display text that says **OUT OF STOCK**
 
-    ![Out of Stock](./out_of_stock.png)
+    ![Out of Stock](https://i.imgur.com/OtQomE5.png)
 
     - **HINT**: 
         - Look up conditional rendering in EJS using `if..else` statements or ternary operators
