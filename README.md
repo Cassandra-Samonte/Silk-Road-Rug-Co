@@ -75,9 +75,7 @@ See some previous student's examples for some inspiration for your store.
 
     ![Out of Stock](https://i.imgur.com/OtQomE5.png)
 
-    - **HINT**: 
-        - Look up conditional rendering in EJS using `if..else` statements or ternary operators
-
+    - **HINT**: Look up conditional rendering in EJS using `if..else` statements or ternary operators
 - Must contain a link back to the index route.
 
 
