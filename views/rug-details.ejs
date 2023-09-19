@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `${rug.name} | Silk Road Rug Co`}) %>
+    <link rel="stylesheet" href="/styles/rug-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= rug.photo %>">
+        <h2 class="rug-name"><%= rug.name %></h2>
+        <section>
+            <p><strong>Name:</strong> <%= rug.name %></p>
+            <p><strong>Location:</strong> <%= rug.location %></p>
+            <p><strong>Description:</strong> <%= rug.description %></p>
+            <p><strong>Type:</strong> <%= rug.type %></p>
+        </section>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

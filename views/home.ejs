@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Silk Road Rug Co'}) %>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="hero">
+            <a href="/rugs" class="btn">View Inventory</a>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos neque reprehenderit repellendus blanditiis, soluta libero architecto qui magni molestiae consequuntur placeat officiis perspiciatis, maxime veniam quos! Distinctio quasi mollitia quos.
+            </p>
+            <a href="/about" class="btn">Learn More</a>
+        </section>
+
+        <section class="featured-rugs">
+            <h2>Featured Rugs</h2>
+            <ul class="rug-grid">
+                <% for (let rug of rugs) { %>
+                <li>
+                    <figure>
+                        <img src="<%= rug.photo %>" alt="rug">
+                    </figure>
+                    <figcaption>
+                        <div class="featured-info">
+                            <h3><%= rug.name %></h3>
+                        </div>
+                        <a href="/rugs/<%= rug._id %>" class="btn">Details</a>
+                    </figcaption>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
