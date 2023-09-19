@@ -42,6 +42,11 @@ app.use(connectLiveReload());
 
 /* Mount routes
 --------------------------------------------------------------- */
+// About Route
+app.get('/about', function (req, res) {
+    res.render('about')
+});
+
 // Seed route: when a GET request is sent to `/seed`, the rugs collection is seeded
 app.get('/seed', function (req, res) {
     db.Rug.deleteMany({})

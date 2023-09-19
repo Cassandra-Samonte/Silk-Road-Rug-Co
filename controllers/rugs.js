@@ -3,7 +3,6 @@
 const express = require('express')
 const router = express.Router()
 
-
 /* Require the db connection, and models
 --------------------------------------------------------------- */
 // we need to access pet model in models folder so we require it here
@@ -20,12 +19,12 @@ router.get('/', function (req, res) {
             res.render('rug-index', { rugs: rugs })})
 })
 
+// Show route (GET/Read): Will display a single rug
 router.get('/:id', function (req, res) {
     db.Rug.findById(req.params.id)
         .then(rug => res.render('rug-details', { rug: rug }))
         .catch(() => res.send('404 Error: Page Not Found'))
 })
-
 
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
