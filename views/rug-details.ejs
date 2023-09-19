@@ -16,7 +16,8 @@
             <p><strong>Name:</strong> <%= rug.name %></p>
             <p><strong>Location:</strong> <%= rug.location %></p>
             <p><strong>Description:</strong> <%= rug.description %></p>
-            <p><strong>Type:</strong> <%= rug.type %></p>
+            <p><strong>Price:</strong> <%= rug.Price %></p>
+            <p><strong>Quantity:</strong> <%= rug.Quantity === 0 ? "Out of Stock" : rug.Quantity %></p>
         </section>
     </div>
 

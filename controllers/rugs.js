@@ -20,11 +20,6 @@ router.get('/', function (req, res) {
             res.render('rug-index', { rugs: rugs })})
 })
 
-
-
-
-// Show Route (GET/Read): Will display an individual rug document
-// using the URL parameter (which is the document _id)
 router.get('/:id', function (req, res) {
     db.Rug.findById(req.params.id)
         .then(rug => res.render('rug-details', { rug: rug }))

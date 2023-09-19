@@ -6,7 +6,6 @@ const express = require('express');
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
 
-
 /* Require the db connection, models, and seed data
 --------------------------------------------------------------- */
 const db = require('./models');
@@ -36,7 +35,6 @@ liveReloadServer.server.once("connection", () => {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-
 /* Middleware (app.use)
 --------------------------------------------------------------- */
 app.use(express.static('public'))
@@ -44,7 +42,6 @@ app.use(connectLiveReload());
 
 /* Mount routes
 --------------------------------------------------------------- */
-
 // Seed route: when a GET request is sent to `/seed`, the rugs collection is seeded
 app.get('/seed', function (req, res) {
     db.Rug.deleteMany({})

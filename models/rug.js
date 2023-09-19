@@ -9,7 +9,9 @@ const rugSchema = new mongoose.Schema({
     name: { type: String, required: true },
     location: { type: String, required: true },
     description: { type: String, required: true },
-    type: { type: String, enum: ['Persian', 'Turkish', 'Moroccan'], required: true },
+    Rating: Number,
+    Price: Number,
+    Quantity: Number,
     photo: { type: String, required: true },
     isFeatured: { type: Boolean, default: false },
     dateAdded: { type: Date, default: Date.now }
