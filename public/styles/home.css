@@ -1,69 +1,105 @@
-/* About section styles */
-.about {
-    background-color: #fff;
-    padding: 2rem;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about p {
-    margin-bottom: 1rem;
-}
-
-/* Featured rugs section styles */
-.featured-rugs {
-    background-color: #f7f7f7;
-    padding: 2rem;
-}
-
-.featured-rugs h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.rug-grid {
+/* Style the navbar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    margin-top: 2rem;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.rug-grid li {
-    width: calc(33% - 1rem);
-    min-width: 300px;
-    margin-bottom: 2rem;
+/* Style the navbar links */
+.navbar a {
+    color: #fff;
+    font-size: 50px; 
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-text {
+    text-align: right;
+}
+
+/* Center the header content */
+.header {
+    background-image: url('/Images/home.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 68px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+/* Featured Rugs */
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-align: right;
+}
+
+.featured-rug {
+    width: 300px; 
+    height: 200px; 
     background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-figure {
-    height: 70%;
-}
-
-.rug-grid img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-figcaption {
-    height: 30%;
-    padding: 1rem 2rem 0 2rem;
+    margin: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    transform: rotate(90deg); /* This rotates the rugs to appear horizontally */
+    transition: transform 0.9s; /* Adds a transition effect */
+    position: relative;
 }
 
-.featured-info h3 {
-    font-size: calc(1em + 0.5vw);
+.featured-rug img {
+    max-width: 100%;
+    height: auto;
 }
 
-.featured-info p {
-    font-size: calc(0.5rem + 0.5vw);
+.featured-rug:hover {
+    transform: rotate(0deg); /* Rotate back to 0 degrees on hover */
 }
+
+/* Rug Card Text and Details */
+
+/* Make the text and details button appear on hover */
+.featured-rug:hover .details {
+    opacity: 1;
+}
+
+.details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+
+.details h3,
+.details .btn {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+}
+
+.details h3 {
+    font-size: 50px;
+}
+
+
