@@ -1,0 +1,81 @@
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 50px; 
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-text {
+    text-align: right;
+}
+
+/* Content */
+.header {
+    background-image: url('/Images/about2.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 68px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+h2 {
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
+p {
+    font-size: 18px;
+    color: white;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 40px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.content h2 {
+    margin: 10px 0; 
+}
+
+.content p {
+    margin: 20px 0; 
+    line-height: 1.5; 
+}
+
+.content ul {
+    text-align: center; 
+    padding-left: 20px; 
+    list-style-type: none;
+}
+
+.content li {
+    margin-bottom: 8px; 
+    color: white;
+}

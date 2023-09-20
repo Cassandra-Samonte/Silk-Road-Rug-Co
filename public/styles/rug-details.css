@@ -1,0 +1,35 @@
+h2 {
+    text-transform: uppercase;
+}
+.featured-rug {
+    max-height: 30%;
+    display: block;
+    margin: 0 auto;
+    transform: rotate(90deg); 
+}
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.button-row {
+    display: flex;
+    margin-top: 0;
+}
+
+.button-row .btn {
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px; 
+}
+
+.button-row .btn a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}

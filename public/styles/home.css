@@ -1,4 +1,4 @@
-/* Style the navbar */
+/* Navbar */
 .navbar {
     background-color: transparent;
     position: fixed;
@@ -10,7 +10,6 @@
     padding: 20px;
 }
 
-/* Style the navbar links */
 .navbar a {
     color: #fff;
     font-size: 50px; 
@@ -22,7 +21,7 @@
     text-align: right;
 }
 
-/* Center the header content */
+/* Header */
 .header {
     background-image: url('/Images/home.jpeg');
     background-size: cover;

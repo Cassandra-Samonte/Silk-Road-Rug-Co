@@ -9,10 +9,13 @@
 <body>
     <!-- Nav Bar -->
     <nav class="navbar">
+
         <a href="/">Home</a>
         <a href="/about">About</a>
+
     </nav>
 
+    <!-- Header -->
     <header id="home" class="header">
 
         <h1>Silk Road Rug Co</h1>
@@ -22,13 +25,19 @@
 
     <!-- Featured Rugs Section -->
     <section id="about" class="content bg-white py-5">
+
         <div class="container">            
+
             <br><br><br><br><br><br><br><br><br><br><br>
+
             <h2>Featured</h2>
+
             <br><br><br><br><br><br>
+
             <div class="row">
                 <% for (let rug of rugs) { %>
                 <div class="col-md-4 mb-4">
+
                     <figure class="featured-rug">
                         <img src="<%= rug.photo %>" alt="rug" class="img-fluid">
                         <div class="details">
@@ -36,11 +45,15 @@
                             <a href="/rugs/<%= rug._id %>" class="btn">Details</a>
                         </div>
                     </figure>
+
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
+                
+                    </div>
                 <% } %>
             </div>
+
         </div>
+
     </section>
 
     <%- include('./partials/footer.ejs') %>
