@@ -16,9 +16,18 @@
             <p><strong>Name:</strong> <%= rug.name %></p>
             <p><strong>Location:</strong> <%= rug.location %></p>
             <p><strong>Description:</strong> <%= rug.description %></p>
-            <p><strong>Price:</strong> <%= rug.Price %></p>
-            <p><strong>Quantity:</strong> <%= rug.Quantity === 0 ? "Out of Stock" : rug.Quantity %></p>
+            <p><strong>Price:</strong> <%= rug.price %></p>
+            <p><strong>Quantity:</strong> <%= rug.quantity === 0 ? "Out of Stock" : rug.quantity %></p>
         </section>
+
+          <!-- send post req to /pet/id replace post req w delete req so we are sending delete req to /ped/id, that will trigger this delete route  -->
+          <section class="actions">
+            <button class="btn"><a href="/rugs/<%= rug._id %>/edit">Edit</a></button>
+            <form method="POST" action="/rugs/<%= rug._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+        </section>
+
     </div>
 
     <%- include('./partials/footer.ejs') %>

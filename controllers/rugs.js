@@ -19,11 +19,38 @@ router.get('/', function (req, res) {
             res.render('rug-index', { rugs: rugs })})
 })
 
-// Show route (GET/Read): Will display a single rug
+// New Route (GET/Read): This route renders a form 
+router.get('/new', (req, res) => {
+    res.render('new-form')
+})
+
+// Create Route (POST/Create)
+router.post('/', (req, res) => {
+    db.Rug.create(req.body)
+    .then(rug => res.redirect('/rugs/' + rug._id))
+})
+
+// Show route (GET/Read)
 router.get('/:id', function (req, res) {
     db.Rug.findById(req.params.id)
         .then(rug => res.render('rug-details', { rug: rug }))
         .catch(() => res.send('404 Error: Page Not Found'))
+})
+
+// Edit Route (GET/Read): This route renders a form
+router.get('/:id/edit', (req, res) => {
+    db.Rug.findById(req.params.id)
+        .then(rug => res.render('edit-form', { rug: rug }))
+})
+
+// Update Route (PUT/Update)
+router.put('/:id', (req, res) => {
+    db.Rug.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    )
+        .then(rug => res.redirect('/rugs/' + rug._id))
 })
 
 /* Export these routes so that they are accessible in `server.js`
