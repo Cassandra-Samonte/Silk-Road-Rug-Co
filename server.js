@@ -9,6 +9,8 @@ const connectLiveReload = require("connect-livereload");
 /* Require the db connection, models, and seed data
 --------------------------------------------------------------- */
 const db = require('./models');
+const methodOverride = require('method-override');
+
 
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
@@ -43,6 +45,9 @@ app.use(connectLiveReload());
 // this will take incoming strings from the body that are URL encoded and parse them 
 // into an object that can be accessed in the request parameter as a property called body (req.body).
 app.use(express.urlencoded({ extended: true }));
+// Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
+app.use(methodOverride('_method'));
+
 
 
 /* Mount routes

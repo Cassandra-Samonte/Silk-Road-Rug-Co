@@ -45,13 +45,18 @@ router.get('/:id/edit', (req, res) => {
 
 // Update Route (PUT/Update)
 router.put('/:id', (req, res) => {
-    db.Rug.findByIdAndUpdate(
-        req.params.id,
-        req.body,
+    const rugId = req.params.id;
+    const decrementAmount = 1;
+    db.Rug.updateOne(
+        { _id: rugId },
+        { $inc: { quantity: -decrementAmount } },
         { new: true }
     )
-        .then(rug => res.redirect('/rugs/' + rug._id))
-})
+    .then(updatedRug => {
+        res.redirect('/rugs/' + rugId);
+    })
+});
+
 
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
