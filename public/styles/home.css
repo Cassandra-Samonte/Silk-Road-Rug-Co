@@ -72,7 +72,7 @@ h2 {
 
 /* Rug Card Text and Details */
 
-/* Make the text and details button appear on hover */
+/* This makes the text and details button appear on hover */
 .featured-rug:hover .details {
     opacity: 1;
 }
