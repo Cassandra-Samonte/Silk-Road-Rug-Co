@@ -18,6 +18,7 @@ h2 {
     justify-content: center;
     transform: rotate(90deg); /* This rotates the rugs to appear horizontally */
     transition: transform 0.9s; /* Adds a transition effect */
+    /* This position the featured rug element relative to its normal position in the document flow */
     position: relative;
 }
 
@@ -41,6 +42,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* This positions text directly in center of rug card */
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0;

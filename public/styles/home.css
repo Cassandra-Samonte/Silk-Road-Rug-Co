@@ -53,7 +53,7 @@ h2 {
     height: 200px; 
     background-color: #fff;
     margin: 20px;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     transform: rotate(90deg); /* This rotates the rugs to appear horizontally */
@@ -67,7 +67,7 @@ h2 {
 }
 
 .featured-rug:hover {
-    transform: rotate(0deg); /* Rotate back to 0 degrees on hover */
+    transform: rotate(0deg); /* Rotate back to 0 degrees on hover*/
 }
 
 /* Rug Card Text and Details */
@@ -78,10 +78,10 @@ h2 {
 }
 
 .details {
-    position: absolute;
+    position: absolute; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* This centers the text within the card */
     text-align: center;
     opacity: 0;
 }
