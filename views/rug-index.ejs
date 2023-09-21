@@ -13,23 +13,29 @@
         <h2>Available Rugs</h2>
     </section>
 
-    <main>
-        <section class="listings">
-            <ul>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="content-container">
+        <main>
+            <div class="row">
                 <% for (let rug of rugs) { %>
-                <li>
-                    <figure>
-                        <img src="<%= rug.photo %>">
-                        <figcaption>
-                            <h4><%= rug.name %></h4>
-                            <p><%= rug.location %>, <%= rug.type %></p>
-                            <a href="/rugs/<%= rug._id %>">Learn More</a>
-                        </figcaption>
-                    </figure>
-                </li>
+                <div class="col-md-4 mb-4">
+    
+                    <figure class="featured-rug">
+                        <img src="<%= rug.photo %>" alt="rug" class="img-fluid">
+                        <div class="details">
+                            <h3><%= rug.name %></h3>
+                            <a href="/rugs/<%= rug._id %>" class="btn">Details</a>
+                        </div>
+                    </figure>            
+                </div>
                 <% } %>
-            </ul>
-        </section>
+            </div>
+        </main>
+    </div>        
+
+        <br><br><br><br><br><br><br><br>
+
     </main>
 
     <%- include('./partials/footer.ejs') %>

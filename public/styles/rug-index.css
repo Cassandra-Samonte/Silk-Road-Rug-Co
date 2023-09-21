@@ -1,65 +1,62 @@
-/* Main content styles */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.content-container {
+    padding: 200px; 
 }
 
-.listings {
-    margin-top: 50px;
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-align: right;
 }
 
-.listings h1 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.listings ul {
-    list-style: none;
-    padding: 0;
-}
-
-.listings li {
-    margin-bottom: 40px;
-    border: 2px solid #ccc;
-    padding: 20px;
-    border-radius: 4px;
+.featured-rug {
+    width: 300px; 
+    height: 200px; 
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg); /* This rotates the rugs to appear horizontally */
+    transition: transform 0.9s; /* Adds a transition effect */
     position: relative;
-    text-align: center;
 }
 
-.listings li img {
+.featured-rug img {
     max-width: 100%;
     height: auto;
 }
 
-figcaption {
-    text-align: left;
+.featured-rug:hover {
+    transform: rotate(0deg); /* Rotate back to 0 degrees on hover */
 }
 
-.listings li h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Rug Card Text and Details */
+
+/* Make the text and details button appear on hover */
+.featured-rug:hover .details {
+    opacity: 1;
 }
 
-.listings li p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
 }
 
-.listings li a {
-    background-color: #333;
+.details h3,
+.details .btn {
     color: #fff;
     font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
 }
 
-.listings li a:hover {
-    background-color: #555;
+.details h3 {
+    font-size: 50px;
 }
+

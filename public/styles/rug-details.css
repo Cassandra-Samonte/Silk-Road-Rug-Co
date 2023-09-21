@@ -1,6 +1,15 @@
+.content-container {
+    padding: 150px;
+}
+
 h2 {
     text-transform: uppercase;
 }
+
+p {
+    text-transform: uppercase;
+}
+
 .featured-rug {
     max-height: 30%;
     display: block;
@@ -13,10 +22,16 @@ h2 {
     margin: 0 auto;
 }
 
+.product-info {
+    justify-content: center;
+    text-align: center;
+}
+
 /* Buttons */
 .button-row {
     display: flex;
     margin-top: 0;
+    justify-content: center;
 }
 
 .button-row .btn {
@@ -26,6 +41,7 @@ h2 {
     border: none;
     background-color: transparent;
     padding: 5px 10px; 
+    text-decoration: none;
 }
 
 .button-row .btn a {
