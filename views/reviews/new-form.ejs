@@ -13,7 +13,7 @@
         <h2>Write us a review!</h2>
         <h4><i>You're writing a review for <a href="/rugs/<%= rug._id %>"><%= rug.name %></a></i></h4>
     </section>
-    <br><br><br>
+    <br><br>
     <form action="/reviews/create/<%= rug._id %>" method="POST">
         <label for="reviewer">Reviewer Name:</label><br>
         <input type="text" id="reviewer" name="reviewer" required><br>
@@ -28,6 +28,7 @@
     </form>
 
     <%- include('../partials/footer.ejs') %>
+    
 </body>
 
 </html>

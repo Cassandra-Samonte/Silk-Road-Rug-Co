@@ -11,8 +11,9 @@
 
     <section class="hero">
         <h2>Create a Listing</h2>
-        <h4><i>Hand Woven Oriental Rugs</i></h4>
+        <h4>Hand Woven Oriental Rugs</h4>
     </section>
+    <br><br>
             <form method="POST" action="/rugs">
                 <!-- Name input -->
                 <label for="name">Name:</label>
@@ -20,11 +21,11 @@
                 <br>
                 <!-- Location input -->
                 <label for="location">Location:</label>
-                <input type="string" id="location" name="location" required>
+                <input type="text" id="location" name="location" required>
                 <br>
                 <!-- Price input -->
                 <label for="price">Price:</label>
-                <input type="string" id="price" name="price" required>
+                <input type="text" id="price" name="price" required>
                 <br>
                 <!-- Quantity input -->
                 <label for="quantity">Quantity:</label>
@@ -43,7 +44,6 @@
                 </form> 
             </form>
         
-
     <%- include('./partials/footer.ejs') %>
 
 </body>
