@@ -12,8 +12,8 @@
     <section class="hero">
         <h2>Edit a Listing</h2>
     </section>
-    <br><br><br><br>
-    <form method="POST" action="/rugs/<%= rug._id %>?_method=PUT">
+    <br><br>
+            <form method="POST" action="/rugs/<%= rug._id %>?_method=PUT">
                 <!-- Name input -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" value="<%= rug.name %>" required>
@@ -38,9 +38,9 @@
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" required><%= rug.description %></textarea>
                 <br>
-                    <input type="submit" value="Edit Rug">
+                <input type="submit" value="Edit Rug">
             </form>
-        </form>
+        <br><br>
     </div>          
 
     <%- include('./partials/footer.ejs') %>

@@ -35,10 +35,10 @@
         <div class="button-row">
             <button class="btn"><a href="/rugs/<%= rug._id %>/edit">Edit</a></button>
             <form method="POST" action="/rugs/<%= rug._id %>?_method=DELETE">
-                <input class="btn btn-danger" type="submit" value="Delete" />
+                <input class="btn" type="submit" value="Delete" />
             </form>
             <form method="POST" action="/rugs/<%= rug._id %>?_method=PUT">
-                <input class="btn btn-success" type="submit" value="Purchase" />
+                <input class="btn" type="submit" value="Purchase" />
             </form>
             <button class="btn"><a href="/reviews/new/<%= rug._id %>">Review</a></button>
         </div>
