@@ -9,44 +9,43 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-        </div>
-        <div class="col-lg-5">
-            <h2 class="rug-name"><%= rug.name %></h2>
-        </div>
+        <div class="container mt-1">
+            <div class="col-lg-5">
+                <h2 class="rug-name"><%= rug.name %></h2>
+            </div>
         </div>
 
         <div class="container mt-1">
-        <div class="row">
+            <div class="row">
                 <figure class="featured-rug">
                     <img src="<%= rug.photo %>" alt="rug" class="img-fluid">
                 </figure>
         
         
-        <!-- Rug details section -->
-        <section class="mt-4 product-info"> 
+                <!-- Rug details section -->
+                <section class="mt-4 product-info"> 
                     <p><strong>Name:</strong> <%= rug.name %></p>
                     <p><strong>Location:</strong> <%= rug.location %></p>
                     <p><strong>Description:</strong> <%= rug.description %></p>
                     <p><strong>Price:</strong> <%= rug.price %></p>
                     <p><strong>Quantity:</strong> <%= rug.quantity === 0 ? "Out of Stock" : rug.quantity %></p>
-                <!-- </div>
-            </div> -->
-        </section>
-
-                    <div class="button-row">
-                        <button class="btn"><a href="/rugs/<%= rug._id %>/edit">Edit</a></button>
-                        <form method="POST" action="/rugs/<%= rug._id %>?_method=DELETE">
-                            <input class="btn btn-danger" type="submit" value="Delete" />
-                        </form>
-                        <form method="POST" action="/rugs/<%= rug._id %>?_method=PUT">
-                            <input class="btn btn-success" type="submit" value="Purchase" />
-                        </form>
-                    </div>
+                </section>
             </div>
-        </section>
-    </div>
+        </div> 
+
+        <div class="button-row">
+            <button class="btn"><a href="/rugs/<%= rug._id %>/edit">Edit</a></button>
+            <form method="POST" action="/rugs/<%= rug._id %>?_method=DELETE">
+                <input class="btn btn-danger" type="submit" value="Delete" />
+            </form>
+            <form method="POST" action="/rugs/<%= rug._id %>?_method=PUT">
+                <input class="btn btn-success" type="submit" value="Purchase" />
+            </form>
+            <button class="btn"><a href="/reviews/new/<%= rug._id %>">Review</a></button>
+        </div>
 
     <%- include('./partials/footer.ejs') %>
+    
 </body>
 
 </html>

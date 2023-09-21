@@ -3,10 +3,11 @@
 const express = require('express')
 const router = express.Router()
 
+
 /* Require the db connection, and models
 --------------------------------------------------------------- */
-// we need to access pet model in models folder so we require it here
 const db = require('../models')
+
 
 /* Routes
 --------------------------------------------------------------- */
@@ -14,9 +15,7 @@ const db = require('../models')
 // Index Route (GET/Read): Will display all rugs
 router.get('/', function (req, res) {
     db.Rug.find({})
-        .then(rugs => 
-         { console.log(rugs);
-            res.render('rug-index', { rugs: rugs })})
+        .then(rugs => res.render('rug-index', { rugs: rugs }))
 })
 
 // New Route (GET/Read): This route renders a form 
@@ -56,6 +55,12 @@ router.put('/:id', (req, res) => {
         res.redirect('/rugs/' + rugId);
     })
 });
+
+// Destroy Route (DELETE/Delete)
+router.delete('/:id', (req, res) => {
+    db.Rug.findByIdAndRemove(req.params.id)
+    .then(() => res.redirect('/rugs'))
+})
 
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */

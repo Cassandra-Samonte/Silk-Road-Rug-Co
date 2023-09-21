@@ -1,10 +1,8 @@
-// This is the file where we define the schema for our pets collection.
-// Anytime we build a schema, we put it in the file that matches the schema's name. 
-
 // Require the Mongoose package
 const mongoose = require('mongoose');
+const reviewSchema = require('./reviews.js')
 
-// Create a schema to define the properties of the pets collection
+// Create a schema to define the properties of the rugs collection
 const rugSchema = new mongoose.Schema({
     name: { type: String, required: true },
     location: { type: String, required: true },
@@ -14,7 +12,8 @@ const rugSchema = new mongoose.Schema({
     quantity: Number,
     photo: { type: String, required: true },
     isFeatured: { type: Boolean, default: false },
-    dateAdded: { type: Date, default: Date.now }
+    dateAdded: { type: Date, default: Date.now },
+    reviews: [reviewSchema]
 });
 
 // Export the schema as a Monogoose model. 

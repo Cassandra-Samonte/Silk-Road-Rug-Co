@@ -3,7 +3,7 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: 'Add a Listing | Silk Road Rug Co'}) %>
-    <link rel="stylesheet" href="/styles/pet-form.css">
+    <link rel="stylesheet" href="/styles/rug-form.css">
 </head>
 
 <body>
@@ -13,36 +13,39 @@
         <h2>Create a Listing</h2>
         <h4><i>Hand Woven Oriental Rugs</i></h4>
     </section>
-
-    <form method="POST" action="/rugs">
-        <!-- Name input -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <!-- Location input -->
-        <label for="location">Location:</label>
-        <input type="string" id="location" name="location" required>
-        <br>
-        <!-- Price input -->
-        <label for="price">Price:</label>
-        <input type="string" id="price" name="price" required>
-        <br>
-          <!-- Quantity input -->
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" required>
-          <br>
-        <!-- Photo input -->
-        <label for="photo">Photo (URL):</label>
-        <input type="text" id="photo" name="photo" required>
-        <br>
-        <!-- Description input -->
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
-        <br>
-        <input type="submit" value="Create Rug">
-    </form>
+            <form method="POST" action="/rugs">
+                <!-- Name input -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <!-- Location input -->
+                <label for="location">Location:</label>
+                <input type="string" id="location" name="location" required>
+                <br>
+                <!-- Price input -->
+                <label for="price">Price:</label>
+                <input type="string" id="price" name="price" required>
+                <br>
+                <!-- Quantity input -->
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                <br>
+                <!-- Photo input -->
+                <label for="photo">Photo (URL):</label>
+                <input type="text" id="photo" name="photo" required>
+                <br>
+                <!-- Description input -->
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <br>
+                <form>
+                <input type="submit" value="Create Rug">
+                </form> 
+            </form>
+        
 
     <%- include('./partials/footer.ejs') %>
+
 </body>
 
 </html>

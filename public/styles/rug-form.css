@@ -1,19 +1,52 @@
 .hero {
     height: 20vh;
     min-height: 175px;
-    margin-bottom: 2rem;
+    justify-content: center;
+    background-image: url('/Images/forms.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 68px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration: none;
 }
 
 form {
-    width: 60%;
+    width: 80%;
     min-width: 300px;
     margin: 0 auto 2rem auto;
+    background-color: #f0f0f0;
+    padding: 80px;
+    border-radius: 15px; 
+    max-width: 900px; 
+    width: 100%; 
 }
 
 label {
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 5px;
     font-weight: bold;
+    display: block; 
+    margin-bottom: 5px; 
 }
 
 input[type="text"],
@@ -25,9 +58,9 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 15px; 
+    border: 1px solid #ccc; 
 }
 
 textarea {
@@ -42,6 +75,10 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 50px; 
+    border: none;
+    color: #fff;
+    cursor: pointer; 
 }
 
 input[type="submit"]:hover {

@@ -5,18 +5,19 @@ const path = require('path');
 const express = require('express');
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
+const methodOverride = require('method-override');
+
 
 /* Require the db connection, models, and seed data
 --------------------------------------------------------------- */
 const db = require('./models');
-const methodOverride = require('method-override');
-
 
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
-// we save all of our rug routes to the rugsCtrl variable
 const rugsCtrl = require('./controllers/rugs')
 const homeCtrl = require('./controllers/home')
+const reviewsCtrl = require('./controllers/reviews')
+
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -71,9 +72,10 @@ app.get('/seed', function (req, res) {
         })
 });
 
-// Tell our app to look at the `controllers/rugs.js` file 
+// Tell our app to look at the `controllers` file 
 app.use('/rugs', rugsCtrl)
 app.use('/', homeCtrl)
+app.use('/reviews', reviewsCtrl)
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
